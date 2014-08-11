@@ -1,0 +1,20 @@
+<h2>New gif</h2>
+
+<form action="/gif" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>"/>
+
+
+  <p>
+    <label for="url" class="form-label">URL</label>
+    <input name="url" id="url">
+  </p>
+
+  <p>
+    <label for="title" class="form-label">Title</label>
+    <input name="title" id="title">
+  </p>
+
+  <p>
+    <input type="submit" value="Create gif" class="form-button">
+  </p>
+</form>

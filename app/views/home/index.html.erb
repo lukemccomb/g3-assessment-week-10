@@ -1,1 +1,14 @@
 <h2>Welcome</h2>
+
+<a href="/about">About</a><br>
+
+<a href="/gif/new">New gif</a>
+
+<% @gifs.each do |gif| %>
+
+<section class="gifs">
+  <img src="<%= gif.url %>">
+  <h1><%= gif.title %></h1>
+</section>
+
+<% end %>
