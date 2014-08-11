@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+#create {
+    background-color: #75e266;
+    border: 1px solid darkgreen;
+    color: #020202;
+}
+
+.error-list {
+    color: red;
+    list-style-type: none;
+}

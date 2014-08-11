@@ -2,7 +2,15 @@
 
 <form action="/gif" method="post">
   <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>"/>
-
+  <% if @gif.errors.present? %>
+    <div class="errors">
+      <ul class="error-list">
+        <% @gif.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 
   <p>
     <label for="url" class="form-label">URL</label>

@@ -20,6 +20,16 @@ feature "Applcation" do
     expect(page).to have_content "gif created successfully"
     expect(page).to have_content "Silly Owls"
 
+  end
+
+  scenario "gif validation" do
+    visit "/"
+    click_on "New gif"
+    fill_in('URL', :with => '')
+    fill_in('Title', :with => '')
+    click_on "Create gif"
+    expect(page).to have_content "Url can't be blank"
+    expect(page).to have_content "Title can't be blank"
 
   end
 end
