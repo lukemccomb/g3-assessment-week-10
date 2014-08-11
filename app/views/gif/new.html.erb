@@ -12,17 +12,24 @@
     </div>
   <% end %>
 
+  <div class=”field_with_errors”>
   <p>
     <label for="url" class="form-label">URL</label>
-    <input name="url" id="url">
-  </p>
+  <input name="url" id="url">
+    <% if @gif.errors[:url].any? %>
+      <p><%= @gif.errors[:url].first %></p>
+    <% end %>
 
   <p>
     <label for="title" class="form-label">Title</label>
     <input name="title" id="title">
+    <% if @gif.errors[:title].any? %>
+      <p><%= @gif.errors[:title].first %></p>
+    <% end %>
   </p>
 
   <p>
     <input type="submit" value="Create gif" class="form-button">
   </p>
+  </div>
 </form>
